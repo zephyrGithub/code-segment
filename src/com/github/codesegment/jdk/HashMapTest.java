@@ -2,6 +2,7 @@ package com.github.codesegment.jdk;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * User: chenxiaojian
@@ -29,6 +30,19 @@ public class HashMapTest {
             System.out.println("get key null value null");
         }
         System.out.println("remove " + hashMap.remove("aaa"));
+
+        hashMap.put("aaa", "aaa");
+        hashMap.put("bbb", "aaa");
+        hashMap.put("ccc", "aaa");
+        hashMap.put("ddd", "aaa");
+        hashMap.put("fff", "aaa");
+        hashMap.put("eee", "aaa");
+        Set<Map.Entry<String,String>> entrySet = hashMap.entrySet();
+
+
+        for (Map.Entry<String,String> entry:entrySet){
+            System.out.println(entry.getKey());
+        }
     }
 
 }
